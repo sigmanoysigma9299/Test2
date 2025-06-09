@@ -70,7 +70,6 @@
       cursor: pointer;
       text-decoration: none;
       color: white;
-      outline-offset: 3px;
       transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
 
@@ -114,46 +113,43 @@
 </head>
 <body>
   <h1>My Video Site</h1>
-
   <button class="mute-button" onclick="toggleMute()">🔇 Toggle Mute</button>
 
   <div class="section-title">Regular Videos</div>
   <div id="regular-videos">
-    <a href="video1.html" class="video-thumb" tabindex="0" aria-label="Watch Gumball 3 Hours">
-      <img src="https://img.youtube.com/vi/Ym2B4E5O7ck/hqdefault.jpg" alt="Gumball 3 Hours Thumbnail" />
+    <a href="video1.html" class="video-thumb" tabindex="0">
+      <img src="https://img.youtube.com/vi/Ym2B4E5O7ck/hqdefault.jpg" alt="Gumball 3 Hours" />
       <div class="video-title">Gumball 3 Hours</div>
     </a>
-
-    <a href="video2.html" class="video-thumb" tabindex="0" aria-label="Watch The Evolution of Freddy Fazbear">
-      <img src="https://img.youtube.com/vi/q-nub_IFiXg/hqdefault.jpg" alt="The Evolution of Freddy Fazbear Thumbnail" />
+    <a href="video2.html" class="video-thumb" tabindex="0">
+      <img src="https://img.youtube.com/vi/q-nub_IFiXg/hqdefault.jpg" alt="The Evolution of Freddy Fazbear" />
       <div class="video-title">The Evolution of Freddy Fazbear</div>
     </a>
-
-    <a href="video4.html" class="video-thumb" tabindex="0" aria-label="Watch FNAF GAME DESTROYS MY PC PT.2">
-      <img src="https://img.youtube.com/vi/TNMIkUrUWTc/hqdefault.jpg" alt="FNAF GAME DESTROYS MY PC [PT.2] Thumbnail" />
+    <a href="video4.html" class="video-thumb" tabindex="0">
+      <img src="https://img.youtube.com/vi/TNMIkUrUWTc/hqdefault.jpg" alt="FNAF GAME DESTROYS MY PC [PT.2]" />
       <div class="video-title">FNAF GAME DESTROYS MY PC [PT.2]</div>
+    </a>
+    <a href="video6.html" class="video-thumb" tabindex="0">
+      <img src="https://img.youtube.com/vi/813rU-6hIlQ/hqdefault.jpg" alt="POV: You Leave Your Front Door Unlocked" />
+      <div class="video-title">POV: You Leave Your Front Door Unlocked</div>
     </a>
   </div>
 
   <div class="section-title">Special Videos</div>
   <div id="special-videos">
-    <a href="video3.html" class="video-thumb" tabindex="0" aria-label="Watch The Clock is Ticking">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShLl6TSs5TDu9m1BDAYLiT2Gr07xvH-iRgfmc-xDwDbsBAjFglv1kByfyq&s=10" alt="The Clock is Ticking Thumbnail" />
+    <a href="video3.html" class="video-thumb" tabindex="0">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShLl6TSs5TDu9m1BDAYLiT2Gr07xvH-iRgfmc-xDwDbsBAjFglv1kByfyq&s=10" alt="The Clock is Ticking" />
       <div class="video-title">The Clock is Ticking</div>
     </a>
-
-    <a href="video5.html" class="video-thumb" tabindex="0" aria-label="Watch Fried Chicken">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROopY8fWIph0va067L15b3RAF1lw1ZBsASoefieQCD6mz3rCXMi1U62ig&s=10" alt="Fried Chicken Thumbnail" />
+    <a href="video5.html" class="video-thumb" tabindex="0">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROopY8fWIph0va067L15b3RAF1lw1ZBsASoefieQCD6mz3rCXMi1U62ig&s=10" alt="Fried Chicken" />
       <div class="video-title">Fried Chicken</div>
     </a>
   </div>
 
   <script>
     function toggleMute() {
-      const videos = document.querySelectorAll("video");
-      videos.forEach(vid => {
-        vid.muted = !vid.muted;
-      });
+      document.querySelectorAll('video').forEach(v => v.muted = !v.muted);
     }
   </script>
 </body>
