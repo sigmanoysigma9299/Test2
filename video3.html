@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Clock is Ticking</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #121212;
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+    h1 {
+      font-weight: 900;
+      font-size: 2.5rem;
+      color: #00bcd4;
+      text-shadow: 0 0 10px #00bcd4cc;
+      user-select: none;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    .video-container {
+      width: 100%;
+      max-width: 900px;
+      background: #1f1f1f;
+      border-radius: 16px;
+      box-shadow: 0 0 25px #00bcd4aa;
+      padding: 0;
+    }
+    iframe {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 16px;
+      border: none;
+      user-select: none;
+      display: block;
+    }
+    a.back-link {
+      margin-top: 50px;
+      color: #00bcd4;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: color 0.3s ease;
+      user-select: none;
+    }
+    a.back-link:hover,
+    a.back-link:focus {
+      color: #80deea;
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>The Clock is Ticking</h1>
+
+  <div class="video-container">
+    <iframe 
+      src="https://www.youtube.com/embed/TJ3CgBN-R1w" 
+      allowfullscreen 
+      loading="lazy" 
+      title="The Clock is Ticking Video">
+    </iframe>
+  </div>
+
+  <a href="index.html" class="back-link" tabindex="0">&larr; Back to Home</a>
+</body>
+</html>
