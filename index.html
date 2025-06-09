@@ -2,113 +2,95 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>My Video Site</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
-
-    /* Reset & base */
-    * {
-      box-sizing: border-box;
-    }
     body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
       background: #121212;
-      color: #e0e0e0;
-      line-height: 1.6;
+      color: white;
+      font-family: 'Inter', sans-serif;
+      margin: 0;
       padding: 40px 20px;
-      min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
+      min-height: 100vh;
     }
-
     h1 {
-      font-weight: 600;
-      font-size: 2.8rem;
-      margin-bottom: 10px;
-      letter-spacing: 0.05em;
       color: #00bcd4;
-      text-shadow: 0 0 8px #00bcd4aa;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 40px;
+      text-shadow: 0 0 10px #00bcd4aa;
     }
-
-    h2 {
-      font-weight: 600;
-      font-size: 1.8rem;
-      margin: 50px 0 20px;
-      border-bottom: 2px solid #00bcd4;
-      padding-bottom: 6px;
+    .section-title {
       width: 100%;
       max-width: 900px;
+      margin: 30px 0 20px 0;
+      border-bottom: 2px solid #00bcd4;
+      padding-bottom: 6px;
+      font-weight: 700;
+      font-size: 1.3rem;
+      letter-spacing: 1px;
+      color: #00bcd4;
+      user-select: none;
     }
-
-    /* Container for all videos */
     #regular-videos, #special-videos {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 28px;
+      gap: 22px;
       max-width: 900px;
       width: 100%;
     }
-
-    /* Each video thumbnail */
     .video-thumb {
-      background: #1e1e1e;
-      border-radius: 10px;
-      box-shadow: 0 3px 8px rgba(0, 188, 212, 0.3);
-      width: 220px;
-      cursor: pointer;
-      text-decoration: none;
-      color: #e0e0e0;
       display: flex;
       flex-direction: column;
-      align-items: center;
+      width: 260px;
+      cursor: pointer;
+      text-decoration: none;
+      color: white;
+      outline-offset: 3px;
       transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .video-thumb img {
+      border-radius: 12px;
+      box-shadow: 0 0 8px #00bcd4aa;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
       user-select: none;
     }
-
-    .video-thumb:hover,
-    .video-thumb:focus {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 24px rgba(0, 188, 212, 0.6);
-      outline: none;
-    }
-
-    .video-thumb img {
-      width: 100%;
-      height: 124px;
-      border-radius: 10px 10px 0 0;
-      object-fit: cover;
-      box-shadow: inset 0 0 12px #00bcd4aa;
-    }
-
-    .video-title {
+    .video-thumb .video-title {
+      margin-top: 8px;
       font-weight: 600;
       font-size: 1rem;
-      padding: 12px 10px 16px;
       text-align: center;
-      letter-spacing: 0.02em;
+      user-select: none;
     }
-
-    /* Responsive tweaks */
-    @media (max-width: 480px) {
-      .video-thumb {
-        width: 100%;
-        max-width: 320px;
-      }
-      #regular-videos, #special-videos {
-        gap: 20px;
-      }
-      h2 {
-        max-width: 320px;
-      }
+    .video-thumb:hover,
+    .video-thumb:focus {
+      transform: scale(1.05);
+      box-shadow: 0 0 18px #00bcd4ff;
+      outline: none;
+    }
+    a.back-link {
+      margin-top: 50px;
+      color: #00bcd4;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+    a.back-link:hover {
+      color: #80deea;
     }
   </style>
 </head>
 <body>
-  <h1>My Video Collection</h1>
+  <h1>My Video Site</h1>
 
+  <div class="section-title">Regular Videos</div>
   <div id="regular-videos">
     <a href="video1.html" class="video-thumb" tabindex="0">
       <img src="https://img.youtube.com/vi/Ym2B4E5O7ck/hqdefault.jpg" alt="Gumball 3 Hours Thumbnail" />
@@ -119,14 +101,20 @@
       <img src="https://img.youtube.com/vi/q-nub_IFiXg/hqdefault.jpg" alt="The Evolution of Freddy Fazbear Thumbnail" />
       <div class="video-title">The Evolution of Freddy Fazbear</div>
     </a>
-  </div>
 
-  <h2>Special Videos</h2>
-  <div id="special-videos">
-    <a href="video3.html" class="video-thumb" tabindex="0">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShLl6TSs5TDu9m1BDAYLiT2Gr07xvH-iRgfmc-xDwDbsBAjFglv1kByfyq&s=10" alt="The Clock Is Ticking Thumbnail" />
-      <div class="video-title">The Clock Is Ticking</div>
+    <a href="video4.html" class="video-thumb" tabindex="0">
+      <img src="https://img.youtube.com/vi/TNMIkUrUWTc/hqdefault.jpg" alt="FNAF GAME DESTROYS MY PC [PT.2] Thumbnail" />
+      <div class="video-title">FNAF GAME DESTROYS MY PC [PT.2]</div>
     </a>
   </div>
+
+  <div class="section-title">Special Videos</div>
+  <div id="special-videos">
+    <a href="video3.html" class="video-thumb" tabindex="0">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShLl6TSs5TDu9m1BDAYLiT2Gr07xvH-iRgfmc-xDwDbsBAjFglv1kByfyq&s=10" alt="The Clock is Ticking Thumbnail" />
+      <div class="video-title">The Clock is Ticking</div>
+    </a>
+  </div>
+
 </body>
 </html>
