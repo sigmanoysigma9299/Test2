@@ -4,7 +4,54 @@
   <meta charset="UTF-8" />
   <title>My Video Site</title>
   <style>
-    /* Styles as before */
+    body {
+      font-family: Arial, sans-serif;
+      background: #121212;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1, h2 {
+      margin-bottom: 20px;
+    }
+
+    #regular-videos, #special-videos {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .video-thumb {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 220px;
+      cursor: pointer;
+      text-decoration: none;
+      color: white;
+      transition: transform 0.2s ease;
+    }
+
+    .video-thumb:hover {
+      transform: scale(1.05);
+    }
+
+    .video-thumb img {
+      width: 220px;
+      height: 124px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #00aaff;
+      margin-bottom: 8px;
+    }
+
+    .video-title {
+      font-weight: bold;
+      font-size: 16px;
+    }
   </style>
 </head>
 <body>
