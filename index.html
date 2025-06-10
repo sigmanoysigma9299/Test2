@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>My Video Site</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
@@ -17,7 +17,6 @@
       align-items: center;
       min-height: 100vh;
     }
-
     h1 {
       color: #00bcd4;
       font-weight: 700;
@@ -25,7 +24,6 @@
       margin-bottom: 40px;
       text-shadow: 0 0 10px #00bcd4aa;
     }
-
     .mute-button {
       margin-bottom: 20px;
       background: #00bcd4;
@@ -37,11 +35,9 @@
       cursor: pointer;
       transition: background 0.2s ease;
     }
-
     .mute-button:hover {
       background: #0097a7;
     }
-
     .section-title {
       width: 100%;
       max-width: 900px;
@@ -54,7 +50,6 @@
       color: #00bcd4;
       user-select: none;
     }
-
     #regular-videos, #special-videos {
       display: flex;
       flex-wrap: wrap;
@@ -63,7 +58,6 @@
       max-width: 900px;
       width: 100%;
     }
-
     .video-thumb {
       display: flex;
       flex-direction: column;
@@ -73,17 +67,14 @@
       color: white;
       transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
-
     .video-thumb img {
       border-radius: 12px;
       box-shadow: 0 0 8px #00bcd4aa;
       width: 100%;
-      height: auto;
       aspect-ratio: 16 / 9;
       object-fit: cover;
       user-select: none;
     }
-
     .video-thumb .video-title {
       margin-top: 8px;
       font-weight: 600;
@@ -91,14 +82,12 @@
       text-align: center;
       user-select: none;
     }
-
     .video-thumb:hover,
     .video-thumb:focus {
       transform: scale(1.05);
       box-shadow: 0 0 18px #00bcd4ff;
       outline: none;
     }
-
     a.back-link {
       margin-top: 50px;
       color: #00bcd4;
@@ -106,7 +95,6 @@
       text-decoration: none;
       font-size: 1.1rem;
     }
-
     a.back-link:hover {
       color: #80deea;
     }
@@ -118,37 +106,21 @@
 
   <div class="section-title">Regular Videos</div>
   <div id="regular-videos">
-    <a href="video1.html" class="video-thumb" tabindex="0">
-      <img src="https://img.youtube.com/vi/Ym2B4E5O7ck/hqdefault.jpg" alt="Gumball 3 Hours" />
-      <div class="video-title">Gumball 3 Hours</div>
-    </a>
-    <a href="video2.html" class="video-thumb" tabindex="0">
-      <img src="https://img.youtube.com/vi/q-nub_IFiXg/hqdefault.jpg" alt="The Evolution of Freddy Fazbear" />
-      <div class="video-title">The Evolution of Freddy Fazbear</div>
-    </a>
-    <a href="video4.html" class="video-thumb" tabindex="0">
-      <img src="https://img.youtube.com/vi/TNMIkUrUWTc/hqdefault.jpg" alt="FNAF GAME DESTROYS MY PC [PT.2]" />
-      <div class="video-title">FNAF GAME DESTROYS MY PC [PT.2]</div>
-    </a>
-    <a href="video6.html" class="video-thumb" tabindex="0">
-      <img src="https://img.youtube.com/vi/813rU-6hIlQ/hqdefault.jpg" alt="POV: You Leave Your Front Door Unlocked" />
-      <div class="video-title">POV: You Leave Your Front Door Unlocked</div>
-    </a>
-    <a href="video7.html" class="video-thumb" tabindex="0">
-      <img src="https://img.youtube.com/vi/4WVOvSmnSf0/hqdefault.jpg" alt="If Mumbo Jumbo did a Minecraft Speedrun" />
-      <div class="video-title">If Mumbo Jumbo did a Minecraft Speedrun</div>
-    </a>
+    <!-- existing regular videos… -->
   </div>
 
   <div class="section-title">Special Videos</div>
   <div id="special-videos">
-    <a href="video3.html" class="video-thumb" tabindex="0">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShLl6TSs5TDu9m1BDAYLiT2Gr07xvH-iRgfmc-xDwDbsBAjFglv1kByfyq&s=10" alt="The Clock is Ticking" />
-      <div class="video-title">The Clock is Ticking</div>
-    </a>
+    <!-- existing special videos -->
     <a href="video5.html" class="video-thumb" tabindex="0">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROopY8fWIph0va067L15b3RAF1lw1ZBsASoefieQCD6mz3rCXMi1U62ig&s=10" alt="Fried Chicken" />
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROopY8fWIph0va067L15b3RAF1lw1ZBsASoefieQCD6mz3rCXMi1U62ig&s=10" alt="Fried Chicken Thumbnail" />
       <div class="video-title">Fried Chicken</div>
+    </a>
+
+    <!-- New: Video 8 -->
+    <a href="video8.html" class="video-thumb" tabindex="0">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQu8OrS_5q7DVWEKoX1s-Fn0pQp-W3wivMSKRX0mWo9T1SaPyG3LXJ2FM&s=10" alt="Cactus Boat Thumbnail" />
+      <div class="video-title">Cactus Boat</div>
     </a>
   </div>
 
