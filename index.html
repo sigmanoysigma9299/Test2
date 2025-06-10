@@ -1,72 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Video List</title>
+  <title>Videos</title>
   <style>
-    body { background: #111; color: #fff; font-family: sans-serif; text-align: center; padding: 20px; }
-    h1, h2 { color: #0cf; }
-    .section { margin-bottom: 40px; }
-    .videos { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; }
-    .thumb { width: 240px; text-decoration: none; color: white; }
-    .thumb img { width: 100%; border-radius: 8px; }
-    button { margin-bottom: 20px; padding: 8px 16px; }
+    body { background: #000; color: #0cf; font-family: sans-serif; text-align: center; }
+    .section { margin: 40px 0; }
+    .videos { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+    .v { width: 200px; text-decoration: none; color: white; }
+    .v img { width: 100%; border-radius: 6px; }
   </style>
 </head>
 <body>
 
-  <h1>Video List</h1>
-  <button onclick="toggleMute()">🔇 Toggle Mute</button>
-
-  <div class="section">
-    <h2>Regular Videos</h2>
-    <div class="videos">
-      <a href="video1.html" class="thumb">
-        <img src="https://img.youtube.com/vi/Ym2B4E5O7ck/hqdefault.jpg">
-        <div>Gumball 3 Hours</div>
-      </a>
-      <a href="video2.html" class="thumb">
-        <img src="https://img.youtube.com/vi/q-nub_IFiXg/hqdefault.jpg">
-        <div>The Evolution of Freddy Fazbear</div>
-      </a>
-      <a href="video4.html" class="thumb">
-        <img src="https://img.youtube.com/vi/TNMIkUrUWTc/hqdefault.jpg">
-        <div>FNAF GAME DESTROYS MY PC [PT.2]</div>
-      </a>
-      <a href="video6.html" class="thumb">
-        <img src="https://img.youtube.com/vi/813rU-6hIlQ/hqdefault.jpg">
-        <div>POV: You Leave Your Front Door Unlocked</div>
-      </a>
-      <a href="video7.html" class="thumb">
-        <img src="https://img.youtube.com/vi/4WVOvSmnSf0/hqdefault.jpg">
-        <div>If Mumbo Jumbo did a Minecraft Speedrun</div>
-      </a>
-      <a href="video8.html" class="thumb">
-        <img src="https://img.youtube.com/vi/mN0zPOpADL4/hqdefault.jpg">
-        <div>Cactus Boat</div>
-      </a>
-    </div>
+  <h1>Regular Videos</h1>
+  <div class="videos">
+    <a href="video1.html" class="v">
+      <img src="https://img.youtube.com/vi/Ym2B4E5O7ck/hqdefault.jpg">
+      <div>Gumball 3 Hours</div>
+    </a>
+    <a href="video2.html" class="v">
+      <img src="https://img.youtube.com/vi/q-nub_IFiXg/hqdefault.jpg">
+      <div>The Evolution of Freddy Fazbear</div>
+    </a>
+    <a href="video4.html" class="v">
+      <img src="https://img.youtube.com/vi/TNMIkUrUWTc/hqdefault.jpg">
+      <div>FNAF GAME DESTROYS MY PC [PT.2]</div>
+    </a>
+    <a href="video6.html" class="v">
+      <img src="https://img.youtube.com/vi/813rU-6hIlQ/hqdefault.jpg">
+      <div>POV: You Leave Your Front Door Unlocked</div>
+    </a>
+    <a href="video7.html" class="v">
+      <img src="https://img.youtube.com/vi/4WVOvSmnSf0/hqdefault.jpg">
+      <div>If Mumbo Jumbo did a Minecraft Speedrun</div>
+    </a>
   </div>
 
-  <div class="section">
-    <h2>Special Videos</h2>
-    <div class="videos">
-      <a href="video3.html" class="thumb">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShLl6TSs5TDu9m1BDAYLiT2Gr07xvH-iRgfmc-xDwDbsBAjFglv1kByfyq&s=10">
-        <div>The Clock is Ticking</div>
-      </a>
-      <a href="video5.html" class="thumb">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROopY8fWIph0va067L15b3RAF1lw1ZBsASoefieQCD6mz3rCXMi1U62ig&s=10">
-        <div>Fried Chicken</div>
-      </a>
-    </div>
+  <h1>Special Videos</h1>
+  <div class="videos">
+    <a href="video3.html" class="v">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShLl6TSs5TDu9m1BDAYLiT2Gr07xvH-iRgfmc-xDwDbsBAjFglv1kByfyq&s=10">
+      <div>The Clock is Ticking</div>
+    </a>
+    <a href="video5.html" class="v">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROopY8fWIph0va067L15b3RAF1lw1ZBsASoefieQCD6mz3rCXMi1U62ig&s=10">
+      <div>Fried Chicken</div>
+    </a>
+    <a href="video8.html" class="v">
+      <img src="https://img.youtube.com/vi/mN0zPOpADL4/hqdefault.jpg">
+      <div>Cactus Boat</div>
+    </a>
   </div>
-
-  <script>
-    function toggleMute() {
-      document.querySelectorAll('video').forEach(v => v.muted = !v.muted);
-    }
-  </script>
 
 </body>
 </html>
