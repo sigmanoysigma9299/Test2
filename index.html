@@ -1,149 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>Video List</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      padding: 40px 20px;
-      background: #121212;
-      color: white;
-      font-family: 'Inter', sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-height: 100vh;
-    }
-
-    h1 {
-      color: #00bcd4;
-      font-weight: 700;
-      text-align: center;
-      margin-bottom: 40px;
-      text-shadow: 0 0 10px #00bcd4aa;
-    }
-
-    .mute-button {
-      background: #00bcd4;
-      color: #121212;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 8px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background 0.2s ease;
-      margin-bottom: 30px;
-    }
-
-    .mute-button:hover {
-      background: #0097a7;
-    }
-
-    .section {
-      width: 100%;
-      max-width: 900px;
-      margin-bottom: 40px;
-    }
-
-    .section-title {
-      font-weight: 700;
-      font-size: 1.3rem;
-      margin-bottom: 20px;
-      color: #00bcd4;
-      border-bottom: 2px solid #00bcd4;
-      padding-bottom: 6px;
-    }
-
-    .videos {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 22px;
-      justify-content: center;
-    }
-
-    .video-thumb {
-      display: flex;
-      flex-direction: column;
-      width: 260px;
-      text-decoration: none;
-      color: white;
-      cursor: pointer;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
-
-    .video-thumb img {
-      border-radius: 12px;
-      box-shadow: 0 0 8px #00bcd4aa;
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      object-fit: cover;
-    }
-
-    .video-title {
-      margin-top: 8px;
-      font-weight: 600;
-      text-align: center;
-    }
-
-    .video-thumb:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 18px #00bcd4ff;
-    }
+    body { background: #111; color: #fff; font-family: sans-serif; text-align: center; padding: 20px; }
+    h1, h2 { color: #0cf; }
+    .section { margin-bottom: 40px; }
+    .videos { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; }
+    .thumb { width: 240px; text-decoration: none; color: white; }
+    .thumb img { width: 100%; border-radius: 8px; }
+    button { margin-bottom: 20px; padding: 8px 16px; }
   </style>
 </head>
 <body>
+
   <h1>Video List</h1>
-  <button class="mute-button" onclick="toggleMute()">🔇 Toggle Mute</button>
+  <button onclick="toggleMute()">🔇 Toggle Mute</button>
 
   <div class="section">
-    <div class="section-title">Regular Videos</div>
+    <h2>Regular Videos</h2>
     <div class="videos">
-      <a href="video1.html" class="video-thumb">
-        <img src="https://img.youtube.com/vi/Ym2B4E5O7ck/hqdefault.jpg" alt="Gumball 3 Hours">
-        <div class="video-title">Gumball 3 Hours</div>
+      <a href="video1.html" class="thumb">
+        <img src="https://img.youtube.com/vi/Ym2B4E5O7ck/hqdefault.jpg">
+        <div>Gumball 3 Hours</div>
       </a>
-      <a href="video2.html" class="video-thumb">
-        <img src="https://img.youtube.com/vi/q-nub_IFiXg/hqdefault.jpg" alt="The Evolution of Freddy Fazbear">
-        <div class="video-title">The Evolution of Freddy Fazbear</div>
+      <a href="video2.html" class="thumb">
+        <img src="https://img.youtube.com/vi/q-nub_IFiXg/hqdefault.jpg">
+        <div>The Evolution of Freddy Fazbear</div>
       </a>
-      <a href="video4.html" class="video-thumb">
-        <img src="https://img.youtube.com/vi/TNMIkUrUWTc/hqdefault.jpg" alt="FNAF GAME DESTROYS MY PC [PT.2]">
-        <div class="video-title">FNAF GAME DESTROYS MY PC [PT.2]</div>
+      <a href="video4.html" class="thumb">
+        <img src="https://img.youtube.com/vi/TNMIkUrUWTc/hqdefault.jpg">
+        <div>FNAF GAME DESTROYS MY PC [PT.2]</div>
       </a>
-      <a href="video6.html" class="video-thumb">
-        <img src="https://img.youtube.com/vi/813rU-6hIlQ/hqdefault.jpg" alt="POV: You Leave Your Front Door Unlocked">
-        <div class="video-title">POV: You Leave Your Front Door Unlocked</div>
+      <a href="video6.html" class="thumb">
+        <img src="https://img.youtube.com/vi/813rU-6hIlQ/hqdefault.jpg">
+        <div>POV: You Leave Your Front Door Unlocked</div>
       </a>
-      <a href="video7.html" class="video-thumb">
-        <img src="https://img.youtube.com/vi/4WVOvSmnSf0/hqdefault.jpg" alt="If Mumbo Jumbo did a Minecraft Speedrun">
-        <div class="video-title">If Mumbo Jumbo did a Minecraft Speedrun</div>
+      <a href="video7.html" class="thumb">
+        <img src="https://img.youtube.com/vi/4WVOvSmnSf0/hqdefault.jpg">
+        <div>If Mumbo Jumbo did a Minecraft Speedrun</div>
+      </a>
+      <a href="video8.html" class="thumb">
+        <img src="https://img.youtube.com/vi/mN0zPOpADL4/hqdefault.jpg">
+        <div>Cactus Boat</div>
       </a>
     </div>
   </div>
 
   <div class="section">
-    <div class="section-title">Special Videos</div>
+    <h2>Special Videos</h2>
     <div class="videos">
-      <a href="video3.html" class="video-thumb">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShLl6TSs5TDu9m1BDAYLiT2Gr07xvH-iRgfmc-xDwDbsBAjFglv1kByfyq&s=10" alt="The Clock is Ticking">
-        <div class="video-title">The Clock is Ticking</div>
+      <a href="video3.html" class="thumb">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShLl6TSs5TDu9m1BDAYLiT2Gr07xvH-iRgfmc-xDwDbsBAjFglv1kByfyq&s=10">
+        <div>The Clock is Ticking</div>
       </a>
-      <a href="video5.html" class="video-thumb">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROopY8fWIph0va067L15b3RAF1lw1ZBsASoefieQCD6mz3rCXMi1U62ig&s=10" alt="Fried Chicken">
-        <div class="video-title">Fried Chicken</div>
+      <a href="video5.html" class="thumb">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROopY8fWIph0va067L15b3RAF1lw1ZBsASoefieQCD6mz3rCXMi1U62ig&s=10">
+        <div>Fried Chicken</div>
       </a>
     </div>
   </div>
 
   <script>
     function toggleMute() {
-      document.querySelectorAll('video').forEach(video => {
-        video.muted = !video.muted;
-      });
+      document.querySelectorAll('video').forEach(v => v.muted = !v.muted);
     }
   </script>
+
 </body>
 </html>
