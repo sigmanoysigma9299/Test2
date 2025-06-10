@@ -2,174 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>My Video Site</title>
-  <style>
-    body {
-      background: #121212;
-      color: white;
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 40px 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-height: 100vh;
-    }
-
-    h1 {
-      color: #00bcd4;
-      font-weight: 700;
-      text-align: center;
-      margin-bottom: 40px;
-      text-shadow: 0 0 10px #00bcd4aa;
-    }
-
-    .mute-button {
-      margin-bottom: 20px;
-      background: #00bcd4;
-      color: #121212;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 8px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background 0.2s ease;
-    }
-
-    .mute-button:hover {
-      background: #0097a7;
-    }
-
-    .section-title {
-      width: 100%;
-      max-width: 900px;
-      margin: 30px 0 20px 0;
-      border-bottom: 2px solid #00bcd4;
-      padding-bottom: 6px;
-      font-weight: 700;
-      font-size: 1.3rem;
-      letter-spacing: 1px;
-      color: #00bcd4;
-      user-select: none;
-    }
-
-    #regular-videos, #special-videos {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 22px;
-      max-width: 900px;
-      width: 100%;
-    }
-
-    .video-thumb {
-      display: flex;
-      flex-direction: column;
-      width: 260px;
-      cursor: pointer;
-      text-decoration: none;
-      color: white;
-      outline-offset: 3px;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
-
-    .video-thumb img {
-      border-radius: 12px;
-      box-shadow: 0 0 8px #00bcd4aa;
-      width: 100%;
-      height: auto;
-      aspect-ratio: 16 / 9;
-      object-fit: cover;
-      user-select: none;
-    }
-
-    .video-thumb .video-title {
-      margin-top: 8px;
-      font-weight: 600;
-      font-size: 1rem;
-      text-align: center;
-      user-select: none;
-    }
-
-    .video-thumb:hover,
-    .video-thumb:focus {
-      transform: scale(1.05);
-      box-shadow: 0 0 18px #00bcd4ff;
-      outline: none;
-    }
-
-    a.back-link {
-      margin-top: 50px;
-      color: #00bcd4;
-      font-weight: 600;
-      text-decoration: none;
-      font-size: 1.1rem;
-    }
-
-    a.back-link:hover {
-      color: #80deea;
-    }
-  </style>
+  <title>My Videos</title>
 </head>
 <body>
-  <h1>My Video Site</h1>
+  <h1>My Videos</h1>
 
-  <button class="mute-button" onclick="toggleMute()">🔇 Toggle Mute</button>
-
-  <div class="section-title">Regular Videos</div>
-  <div id="regular-videos">
-    <a href="video1.html" class="video-thumb" tabindex="0" aria-label="Watch Gumball 3 Hours">
-      <img src="https://img.youtube.com/vi/Ym2B4E5O7ck/hqdefault.jpg" alt="Gumball 3 Hours Thumbnail" />
-      <div class="video-title">Gumball 3 Hours</div>
-    </a>
-
-    <a href="video2.html" class="video-thumb" tabindex="0" aria-label="Watch The Evolution of Freddy Fazbear">
-      <img src="https://img.youtube.com/vi/q-nub_IFiXg/hqdefault.jpg" alt="The Evolution of Freddy Fazbear Thumbnail" />
-      <div class="video-title">The Evolution of Freddy Fazbear</div>
-    </a>
-
-    <a href="video4.html" class="video-thumb" tabindex="0" aria-label="Watch FNAF GAME DESTROYS MY PC PT.2">
-      <img src="https://img.youtube.com/vi/TNMIkUrUWTc/hqdefault.jpg" alt="FNAF GAME DESTROYS MY PC [PT.2] Thumbnail" />
-      <div class="video-title">FNAF GAME DESTROYS MY PC [PT.2]</div>
-    </a>
-
-    <a href="video6.html" class="video-thumb" tabindex="0" aria-label="Watch Mumbo Jumbo Works With Mojang">
-      <img src="https://img.youtube.com/vi/813rU-6hIlQ/hqdefault.jpg" alt="Mumbo Jumbo Works With Mojang Thumbnail" />
-      <div class="video-title">Mumbo Jumbo Works With Mojang</div>
-    </a>
-  </div>
-
-  <div class="section-title">Special Videos</div>
-  <div id="special-videos">
-    <a href="video3.html" class="video-thumb" tabindex="0" aria-label="Watch The Clock is Ticking">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShLl6TSs5TDu9m1BDAYLiT2Gr07xvH-iRgfmc-xDwDbsBAjFglv1kByfyq&s=10" alt="The Clock is Ticking Thumbnail" />
-      <div class="video-title">The Clock is Ticking</div>
-    </a>
-
-    <a href="video5.html" class="video-thumb" tabindex="0" aria-label="Watch Fried Chicken">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROopY8fWIph0va067L15b3RAF1lw1ZBsASoefieQCD6mz3rCXMi1U62ig&s=10" alt="Fried Chicken Thumbnail" />
-      <div class="video-title">Fried Chicken</div>
-    </a>
-
-    <a href="video7.html" class="video-thumb" tabindex="0" aria-label="Watch Sunset With VHS Filter">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRykpl8o55ZEmYvwWyIhzSkFeR0q3O5Qx9pxA&s" alt="Sunset With VHS Filter Thumbnail" />
-      <div class="video-title">Sunset With VHS Filter</div>
-    </a>
-
-    <a href="video8.html" class="video-thumb" tabindex="0" aria-label="Watch Cactus Boat">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQu8OrS_5q7DVWEKoX1s-Fn0pQp-W3wivMSKRX0mWo9T1SaPyG3LXJ2FM&s=10" alt="Cactus Boat Thumbnail" />
-      <div class="video-title">Cactus Boat</div>
-    </a>
-  </div>
-
-  <script>
-    function toggleMute() {
-      const videos = document.querySelectorAll("video");
-      videos.forEach(vid => {
-        vid.muted = !vid.muted;
-      });
-    }
-  </script>
+  <ul>
+    <li>
+      <a href="video1.html">Video 1: [Your Video 1 Title Here]</a>
+    </li>
+    <li>
+      <a href="video2.html">Video 2: [Your Video 2 Title Here]</a>
+    </li>
+    <li>
+      <a href="video3.html">Video 3: [Your Video 3 Title Here]</a>
+    </li>
+    <li>
+      <a href="video4.html">Video 4: [Your Video 4 Title Here]</a>
+    </li>
+    <li>
+      <a href="video5.html">Video 5: [Your Video 5 Title Here]</a>
+    </li>
+    <li>
+      <a href="video6.html">I Tried Making a Mumbo Jumbo Redstone Build in Real Life</a>
+    </li>
+    <li>
+      <a href="video7.html">Video 7: [Your Video 7 Title Here]</a>
+    </li>
+    <li>
+      <a href="video8.html">Cactus Boat</a>
+    </li>
+  </ul>
 </body>
 </html>
