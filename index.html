@@ -2,82 +2,162 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cactus Boat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Video Site</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
-      margin: 0;
-      background-color: #121212;
-      color: #fff;
+      background: #121212;
+      color: white;
       font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 40px 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 40px 20px;
       min-height: 100vh;
     }
-    header {
-      width: 100%;
-      max-width: 900px;
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    header h1 {
-      font-weight: 800;
-      font-size: 2.2rem;
-      color: #00bcd4;
-      text-shadow: 0 0 10px #00bcd4cc;
-      user-select: none;
-    }
-    main {
-      width: 100%;
-      max-width: 900px;
-      background: #1f1f1f;
-      border-radius: 16px;
-      box-shadow: 0 0 25px #00bcd4aa;
-      padding: 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    iframe {
-      width: 100%;
-      height: 506px;
-      border-radius: 12px;
-      border: none;
-      box-shadow: 0 0 12px #00bcd4cc;
-      user-select: none;
-    }
-    a.back-link {
-      margin-top: 40px;
+
+    h1 {
       color: #00bcd4;
       font-weight: 700;
-      text-decoration: none;
-      font-size: 1.1rem;
-      transition: color 0.3s ease;
+      text-align: center;
+      margin-bottom: 40px;
+      text-shadow: 0 0 10px #00bcd4aa;
+    }
+
+    .mute-button {
+      margin-bottom: 20px;
+      background: #00bcd4;
+      color: #121212;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .mute-button:hover {
+      background: #0097a7;
+    }
+
+    .section-title {
+      width: 100%;
+      max-width: 900px;
+      margin: 30px 0 20px 0;
+      border-bottom: 2px solid #00bcd4;
+      padding-bottom: 6px;
+      font-weight: 700;
+      font-size: 1.3rem;
+      letter-spacing: 1px;
+      color: #00bcd4;
       user-select: none;
     }
-    a.back-link:hover,
-    a.back-link:focus {
-      color: #80deea;
+
+    #regular-videos, #special-videos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 22px;
+      max-width: 900px;
+      width: 100%;
+    }
+
+    .video-thumb {
+      display: flex;
+      flex-direction: column;
+      width: 260px;
+      cursor: pointer;
+      text-decoration: none;
+      color: white;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .video-thumb img {
+      border-radius: 12px;
+      box-shadow: 0 0 8px #00bcd4aa;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      user-select: none;
+    }
+
+    .video-thumb .video-title {
+      margin-top: 8px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-align: center;
+      user-select: none;
+    }
+
+    .video-thumb:hover,
+    .video-thumb:focus {
+      transform: scale(1.05);
+      box-shadow: 0 0 18px #00bcd4ff;
       outline: none;
+    }
+
+    a.back-link {
+      margin-top: 50px;
+      color: #00bcd4;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+
+    a.back-link:hover {
+      color: #80deea;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Cactus Boat</h1>
-  </header>
+  <h1>My Video Site</h1>
+  <button class="mute-button" onclick="toggleMute()">🔇 Toggle Mute</button>
 
-  <main>
-    <iframe 
-      src="https://www.youtube.com/embed/ltyvxDQLxjY" 
-      allowfullscreen 
-      loading="lazy" 
-      title="Cactus Boat">
-    </iframe>
-  </main>
+  <div class="section-title">Regular Videos</div>
+  <div id="regular-videos">
+    <a href="video1.html" class="video-thumb" tabindex="0">
+      <img src="https://img.youtube.com/vi/Ym2B4E5O7ck/hqdefault.jpg" alt="Gumball 3 Hours" />
+      <div class="video-title">Gumball 3 Hours</div>
+    </a>
+    <a href="video2.html" class="video-thumb" tabindex="0">
+      <img src="https://img.youtube.com/vi/q-nub_IFiXg/hqdefault.jpg" alt="The Evolution of Freddy Fazbear" />
+      <div class="video-title">The Evolution of Freddy Fazbear</div>
+    </a>
+    <a href="video4.html" class="video-thumb" tabindex="0">
+      <img src="https://img.youtube.com/vi/TNMIkUrUWTc/hqdefault.jpg" alt="FNAF GAME DESTROYS MY PC [PT.2]" />
+      <div class="video-title">FNAF GAME DESTROYS MY PC [PT.2]</div>
+    </a>
+    <a href="video6.html" class="video-thumb" tabindex="0">
+      <img src="https://img.youtube.com/vi/813rU-6hIlQ/hqdefault.jpg" alt="POV: You Leave Your Front Door Unlocked" />
+      <div class="video-title">POV: You Leave Your Front Door Unlocked</div>
+    </a>
+    <a href="video7.html" class="video-thumb" tabindex="0">
+      <img src="https://img.youtube.com/vi/4WVOvSmnSf0/hqdefault.jpg" alt="If Mumbo Jumbo did a Minecraft Speedrun" />
+      <div class="video-title">If Mumbo Jumbo did a Minecraft Speedrun</div>
+    </a>
+  </div>
 
-  <a href="index.html" class="back-link" tabindex="0">&larr; Back to Home</a>
+  <div class="section-title">Special Videos</div>
+  <div id="special-videos">
+    <a href="video3.html" class="video-thumb" tabindex="0">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShLl6TSs5TDu9m1BDAYLiT2Gr07xvH-iRgfmc-xDwDbsBAjFglv1kByfyq&s=10" alt="The Clock is Ticking" />
+      <div class="video-title">The Clock is Ticking</div>
+    </a>
+    <a href="video5.html" class="video-thumb" tabindex="0">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROopY8fWIph0va067L15b3RAF1lw1ZBsASoefieQCD6mz3rCXMi1U62ig&s=10" alt="Fried Chicken" />
+      <div class="video-title">Fried Chicken</div>
+    </a>
+  </div>
+
+  <script>
+    function toggleMute() {
+      document.querySelectorAll('video').forEach(video => {
+        video.muted = !video.muted;
+      });
+    }
+  </script>
 </body>
 </html>
